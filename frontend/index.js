@@ -20,7 +20,7 @@ function toggleUser(){
     var userImage = document.getElementById("user-image");
     var userName = document.getElementById("user-name");
     var userGender = document.getElementById("user-gender");
-  userName.innerHTML = user[curId].name;
-  userGender.innerHTML = user[curId].gender;
-  userImage.src = user[curId].image;
+  userName.innerHTML = users[curId].name;
+  userGender.innerHTML = users[curId].gender;
+  userImage.src = users[curId].image;
 }

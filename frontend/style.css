@@ -30,6 +30,6 @@ h1{
 }
 
 .card button:hover{
-     background-color:burlywood;
+     background-color:rgb(135, 154, 222);
     cursor: pointer;
 }
