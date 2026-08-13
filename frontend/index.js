@@ -24,3 +24,24 @@ function toggleUser(){
   userGender.innerHTML = users[curId].gender;
   userImage.src = users[curId].image;
 }
+function Randomuser(){
+    fetch("https://randomuser.me/api/")
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(data){
+        var UserName = document.getElementById("user-name");
+        var UserGender = document.getElementById("user-gender");
+        var userImage = document.getElementById("user-image");
+        var newusername = data.results[0].name.first + " " + data.results[0].name.last;
+        var newusergender = data.results[0].gender;
+        var newuserimage = data.results[0].picture.large;
+
+        UserName.innerHTML = newusername;
+        UserGender.innerHTML = newusergender;
+        userImage.src = newuserimage;
+    })
+    .catch(function(err){
+        console.log("error occurred:" + err);
+    })
+}
