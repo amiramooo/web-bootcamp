@@ -6,9 +6,16 @@
     <title>Web bootcamp</title>
     <link href="style.css" rel="stylesheet" type ="text/css">
 </head>
-<body>
+<body class="body">
     <!-- <h1>welcome to web development bootcamp</h1> -->
-     <div class="card">
+     <div class="navbar">
+     <a href = "">Home</a>
+     <a href = "leetcode-stats.html">Leetcode stats</a>
+     <a href = "codeforces.html">Codeforces<i class="fa fa-sort-amount-asc" aria-hidden="true"></i></a>
+     <a href = "gitpulse.html">Git pulse</a>
+     <a href = "ask-gemini.html">Ask Gemini</a> 
+     </div>
+        <div class="card">
         <img src="john.png" alt="User image" id = "user-image">
         <h2 id = "user-name">john doe </h2>
         <p id = "user-gender">male</p>
@@ -16,6 +23,7 @@
         <br>
         <button onclick="Randomuser()">Random user</button>
      </div>
+
       <script src="index.js"></script>
 </body>
 </html>
