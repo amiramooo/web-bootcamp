@@ -41,7 +41,26 @@ function Randomuser(){
         UserGender.innerHTML = newusergender;
         userImage.src = newuserimage;
     })
+}
+    
+    function myRandomUser(){
+    fetch("/api/random-user")
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(data){
+        var UserName = document.getElementById("user-name");
+        var UserGender = document.getElementById("user-gender");
+        var userImage = document.getElementById("user-image");
+        
+
+        UserName.innerHTML = data.name;
+        UserGender.innerHTML = data.gender;
+        userImage.src = data.image;
+    })
+    
+  
     .catch(function(err){
         console.log("error occurred:" + err);
     })
-}
+    }
